@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://utkarshs-crafted-opus.lovable.app/sitemap.xml

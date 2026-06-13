@@ -1,0 +1,14 @@
+# Utkarsh Srivastava
+
+> Portfolio of Utkarsh Srivastava — full-stack developer with production systems, IEEE-published research, and government-showcased work.
+
+## Pages
+
+- [Home](/): About, featured work, experience, research, leadership, recognition, and contact.
+
+## Case Studies
+
+- [e-Nivaran](/work/enivaran): AI-powered civic complaint platform — Top 30 of 1,500+ teams at Hack4Delhi, Bharat Mandapam.
+- [ROOTS](/work/roots): CV-verified sustainability platform — IEEE YESIST12 Global Finalist, represented India in Malaysia.
+- [Hack4Bihar](/work/hack4bihar): National hackathon platform rebuilt in Next.js — 25,000+ visits, 5,000+ registrations.
+- [Event Portal](/work/eventportal): End-to-end event platform with real-time WebSocket auction — 270+ participants, zero failures.
