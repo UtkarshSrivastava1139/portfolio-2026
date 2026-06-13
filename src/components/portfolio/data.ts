@@ -220,7 +220,7 @@ export const experience: Experience[] = [
   },
 ];
 
-const CERT_BASE = "src\\assets\\certificates";
+const CERT_BASE = "/certificates";
 
 export type Certificate = {
   title: string;
@@ -266,7 +266,7 @@ export const certificates: Certificate[] = [
   { title: "Finalist — HackwithUP Hackathon", org: "Chandigarh University TBI", category: "Hackathon", year: "Nov 2025", image: `${CERT_BASE}/hackwithup.png` },
 ];
 
-const LIFE_BASE = "src\\assets\\images";
+const LIFE_BASE = "/images";
 
 export type LifeImageSlide = {
   src: string;

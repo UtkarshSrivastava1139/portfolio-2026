@@ -3,6 +3,25 @@ import { createServerFn } from "@tanstack/react-start";
 const GH_USER = "UtkarshSrivastava1139";
 const GH_ENDPOINT = "https://api.github.com/graphql";
 
+const currentYear = new Date().getFullYear();
+const startYear = 2019;
+
+function getYearlyQueries() {
+  let yearlyQueries = "";
+  for (let y = startYear; y <= currentYear; y++) {
+    const from = `${y}-01-01T00:00:00Z`;
+    const to = `${y}-12-31T23:59:59Z`;
+    yearlyQueries += `
+      y${y}: contributionsCollection(from: "${from}", to: "${to}") {
+        contributionCalendar {
+          totalContributions
+        }
+      }
+    `;
+  }
+  return yearlyQueries;
+}
+
 const QUERY = /* GraphQL */ `
   query ($login: String!) {
     user(login: $login) {
@@ -18,6 +37,7 @@ const QUERY = /* GraphQL */ `
           }
         }
       }
+      ${getYearlyQueries()}
       repositories(
         first: 100
         ownerAffiliations: OWNER
@@ -169,8 +189,18 @@ export const getGithubStats = createServerFn({ method: "GET" }).handler(async ()
     else break;
   }
 
+  // Sum all-time contributions
+  let allTimeContributions = 0;
+  for (let y = startYear; y <= currentYear; y++) {
+    const key = `y${y}`;
+    const yearData = (u as any)[key];
+    if (yearData?.contributionCalendar?.totalContributions) {
+      allTimeContributions += yearData.contributionCalendar.totalContributions;
+    }
+  }
+
   const data: GhStats = {
-    totalContributions: u.contributionsCollection.contributionCalendar.totalContributions,
+    totalContributions: allTimeContributions,
     weeks,
     languages,
     latestCommit: latest

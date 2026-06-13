@@ -104,7 +104,7 @@ export function CurrentlyBuilding() {
                   <span className="font-display text-xl font-semibold">
                     {data.totalContributions.toLocaleString()}
                   </span>{" "}
-                  <span className="text-sm text-muted">contributions in the last year</span>
+                  <span className="text-sm text-muted">contributions</span>
                 </div>
               </div>
               <div className="flex items-center gap-1.5 text-[10px] text-faint">

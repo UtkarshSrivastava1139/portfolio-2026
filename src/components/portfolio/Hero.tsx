@@ -135,9 +135,9 @@ export function Hero() {
             </div>
 
             <div className="absolute -bottom-6 left-4 border border-[var(--color-rule-strong)] bg-[color-mix(in_oklab,var(--color-elevated)_88%,transparent)] px-5 py-4 backdrop-blur-xl sm:-left-8">
-              <div className="font-display text-3xl font-bold tracking-[-0.03em] text-ink">25,000+</div>
+              <div className="font-display text-3xl font-bold tracking-[-0.03em] text-ink">20+</div>
               <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-muted">
-                Product visits shipped
+                Projects shipped
               </div>
             </div>
           </div>
